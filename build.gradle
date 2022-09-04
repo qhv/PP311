@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
     id 'java'
     id 'war'
+    id 'io.freefair.lombok' version '6.5.0.3'
 }
 
 group = 'qhv.alex'
@@ -21,13 +22,16 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.postgresql:postgresql'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
 }

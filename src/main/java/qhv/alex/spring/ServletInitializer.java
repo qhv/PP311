@@ -1,4 +1,4 @@
-package qhv.alex.pp_3_1_1_spring_boot;
+package qhv.alex.spring;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
